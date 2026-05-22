@@ -7,3 +7,6 @@ export const supabase = createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+
+console.log('URL:', SUPABASE_URL)
+console.log('KEY:', SUPABASE_KEY)

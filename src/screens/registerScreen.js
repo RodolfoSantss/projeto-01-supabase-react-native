@@ -26,7 +26,7 @@ export default function RegisterScreen({
 
     const { data, error } =
       await supabase.auth.signUp({
-        email,
+        email: email.trim(),
         password,
       })
 
@@ -34,7 +34,8 @@ export default function RegisterScreen({
     console.log('ERROR:', error)
 
     if (error) {
-      return alert('Erro')
+      console.log(error)
+      return alert(error.message)
     }
 
     alert('Conta criada,Agora faça login')

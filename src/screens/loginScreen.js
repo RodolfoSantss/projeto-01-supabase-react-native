@@ -30,9 +30,10 @@ export default function LoginScreen({
         password,
       })
 
-    if (error) {
-      return alert('Erro no login')
-    }
+      if (error) {
+        console.log(error)
+        return alert(error.message)
+      }
 
     alert('Sucesso,Login realizado')
   }
